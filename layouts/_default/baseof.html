@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
     <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ with resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+      <link href="{{ .RelPermalink }}" rel="stylesheet" type="text/css">
+    {{ end }}
   </head>
   <body>
     {{ block "main" . }}
