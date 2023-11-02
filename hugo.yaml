@@ -1,0 +1,5 @@
+---
+baseURL: "https://pencilboard.art"
+title: "pencilboard.art"
+disableKinds: ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+...
