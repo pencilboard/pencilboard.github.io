@@ -1,0 +1,12 @@
+<div class="pencilboard-category">
+  <h2>
+    {{ .Title }}
+  </h2>
+  <div class="grid">
+    {{ range .RegularPages }}
+      <a href="{{ .RelPermalink }}">
+        <img src="{{ .Params.images.sm }}" alt="{{ .Title }}">
+      </a>
+    {{ end }}
+  </div>
+</div>

@@ -2,15 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="robots" content="noindex">
-    <title>{{ .Title }}</title>
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ with resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
-      <link href="{{ .RelPermalink }}" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/favicon.ico">
+    {{ $cssOpts := dict "transpiler" "libsass" "targetPath" "css/main.css" }}
+    {{ with resources.Get "scss/main.scss" | toCSS $cssOpts | resources.Minify | resources.Fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{ end }}
   </head>
   <body>
-    {{ block "main" . }}
-    {{ end }}
+    <header class="main-header">
+      <div class="container-fluid">
+        <div class="grid">
+          <h1>
+            <a href="/">Nathan Ellis</a>
+          </h1>
+          <nav>
+            <ul>
+              <li>
+                <a href="/#pencilboards">Pencil Boards</a>
+              </li>
+              <li>
+                <a href="/#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      {{ block "main" . }}
+      {{ end }}
+    </main>
   </body>
 </html>

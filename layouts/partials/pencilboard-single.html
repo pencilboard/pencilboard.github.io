@@ -1,0 +1,60 @@
+<div class="pencilboard-header">
+  <div class="container-fluid">
+    <div class="grid">
+      <h2>
+        {{ .Title }}
+      </h2>
+      <p>
+        {{ .Params.size }}
+      </p>
+    </div>
+  </div>
+</div>
+<div class="pencilboard-primary-image">
+  <img src="{{ .Params.images.lg }}" alt="{{ .Title }}">
+</div>
+{{ with .Params.images.details }}
+  <div class="pencilboard-secondary-images">
+    <div class="container-fluid">
+      <h3>
+        Details
+      </h3>
+      <div class="grid">
+        {{ $i := 0 }}
+        {{ range . }}
+          {{ $i = add $i 1 }}
+          <img src="{{ . }}" alt="Detail {{ $i }}">
+        {{ end }}
+      </div>
+    </div>
+  </div>
+{{ end }}
+<nav class="pencilboard-nav">
+  <ul>
+    <li>
+      {{ $next := partial "svg.html" (dict "Page" . "name" "chevron-left") }}
+      {{ with .Next }}
+        <a href="{{ .Permalink }}" title="Previous: {{ .Title }}">
+          {{ $next }}
+        </a>
+      {{ else }}
+        <span>{{ $next }}</span>
+      {{ end }}
+    </li>
+    <li>
+      <a href="/#pencilboards" title="Back to all">
+        {{ partial "svg.html" (dict "Page" . "name" "view-grid") }}
+      </a>
+    </li>
+    <li>
+      {{ $prev := partial "svg.html" (dict "Page" . "name" "chevron-right") }}
+      {{ with .Prev }}
+        <a href="{{ .Permalink }}" title="Next: {{ .Title }}">
+          {{ $prev }}
+        </a>
+      {{ else }}
+        <span>{{ $prev }}</span>
+      {{ end }}
+    </li>
+  </ul>
+</nav>
