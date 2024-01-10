@@ -404,6 +404,21 @@ Components */
         font-size: $font-size-large;
       }
     }
+    .instagram {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: spacer(1);
+      
+      path {
+        fill: $gray3;
+      }
+      &:hover {
+        path {
+          fill: $white;
+        }
+      }
+    }
   }
   @media (min-width: $breakpoint-md) {
     .grid {
