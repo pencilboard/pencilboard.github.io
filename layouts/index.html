@@ -3,22 +3,14 @@
     <div class="container-fluid">
       <div class="grid">
         <div class="image">
-          <img src="/images/bolt-sm.jpg" alt="Bolt">
-          <img src="/images/nate.jpg" alt="Nathan Ellis">
+          <img src="{{ .Params.feature_image.src }}" alt="{{ .Params.feature_image.alt }}">
+          <img src="{{ .Params.about.image.src }}" alt="{{ .Params.about.image.alt }}">
         </div>
         <div class="content">
           <h2>
-            About the art and the artist
+            {{ .Params.about.headline }}
           </h2>
-          <p>
-            Nathan Ellis is a local artist and designer living in Prairie Village, KS. He wondered what would happen if #2 pencils were broken up and glued down to create a three dimensional super canvas… and that’s how pencil board art was born! For more fun, he adds found objects and hidden messages throughout the piece to create visual interest and relevant ties back to the subject.
-          </p>
-          <p>
-            <a href="/dogs/bolt/">In this piece</a>, Bolt is the primary subject, but as you look closer, you’ll find a coffee stir stick, a toy spider, a leash, a dog bone, an acorn, an action figure, an Alan wrench, a monopoly house, and many more surprises and hidden messages.
-          </p>
-          <p>
-            Nathan is an illustration graduate of the University of Central Missouri and is currently a full-time artist, designer and co-founder of <a href="https://createwithadvocate.com">Advocate Creative</a>.
-          </p>
+          {{ .Params.about.content | $.Page.RenderString (dict "display" "block") }}
         </div>
       </div>
     </div>
@@ -34,18 +26,13 @@
     <div class="container-fluid">
       <div class="grid">
         <div class="image">
-          <img src="/images/contact.jpg" alt="Contact">
+          <img src="{{ .Params.contact.image.src }}" alt="{{ .Params.contact.image.alt }}">
         </div>
         <div class="content">
           <h2>
-            Let’s get in touch
+            {{ .Params.contact.headline }}
           </h2>
-          <p>
-            If you have any questions about my work, don’t hesitate to <a href="mailto:nathan.ellis@createwithadvocate.com">email me</a>.
-          </p>
-          <p>
-            I am also open for commissions and will happily discuss your ideas with you.
-          </p>
+          {{ .Params.contact.content | $.Page.RenderString (dict "display" "block") }}
           <p>
             <a class="instagram" href="https://www.instagram.com/pencilboardart/" target="_blank">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
