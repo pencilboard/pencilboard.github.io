@@ -417,6 +417,10 @@ Components */
       align-items: center;
       gap: spacer(1);
 
+      svg {
+        width: spacer(4);
+        height: spacer(4);
+      }
       path {
         fill: $gray3;
       }
@@ -470,11 +474,6 @@ Components */
   @media (min-width: $breakpoint-lg) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}
-
-// pencilboard
-
-.pencilboard {
 }
 
 // pencilboard-header

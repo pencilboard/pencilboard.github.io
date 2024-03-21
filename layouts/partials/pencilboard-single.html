@@ -32,7 +32,7 @@
 <nav class="pencilboard-nav">
   <ul>
     <li>
-      {{ $next := partial "svg.html" (dict "Page" . "name" "chevron-left") }}
+      {{ $next := partial "svg.html" (dict "name" "chevron-left") }}
       {{ with .Next }}
         <a href="{{ .Permalink }}" title="Previous: {{ .Title }}">
           {{ $next }}
@@ -43,11 +43,11 @@
     </li>
     <li>
       <a href="/#pencilboards" title="Back to all">
-        {{ partial "svg.html" (dict "Page" . "name" "view-grid") }}
+        {{ partial "svg.html" (dict "name" "view-grid") }}
       </a>
     </li>
     <li>
-      {{ $prev := partial "svg.html" (dict "Page" . "name" "chevron-right") }}
+      {{ $prev := partial "svg.html" (dict "name" "chevron-right") }}
       {{ with .Prev }}
         <a href="{{ .Permalink }}" title="Next: {{ .Title }}">
           {{ $prev }}
