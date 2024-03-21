@@ -608,12 +608,6 @@ Components */
 }
 
 /* -----------------------------------------------------------------------------
-Exceptions */
+User styles */
 
-.pencilboard.prairie-village {
-  .pencilboard-primary-image {
-    img {
-      max-width: 1200px;
-    }
-  }
-}
+@import 'user-styles';
