@@ -1,6 +1,6 @@
 <div class="pencilboard-header">
   <div class="container-fluid">
-    <div class="grid">
+    <div class="pencilboard-header__grid">
       <h2>
         {{ .Title }}
       </h2>
@@ -19,7 +19,7 @@
       <h3>
         Details
       </h3>
-      <div class="grid">
+      <div class="pencilboard-secondary-images__grid">
         {{ $i := 0 }}
         {{ range . }}
           {{ $i = add $i 1 }}
