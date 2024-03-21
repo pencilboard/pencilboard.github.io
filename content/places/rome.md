@@ -1,7 +1,7 @@
 ---
 title: Rome
 size: 48” x 48”
-weight: 202
+weight: 2
 images:
   lg: /images/rome.jpg
   sm: /images/rome-sm.jpg

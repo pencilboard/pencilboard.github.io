@@ -29,11 +29,12 @@
     </div>
   </div>
 {{ end }}
+{{ $pages := sort site.RegularPages.ByWeight "Section" }}
 <nav class="pencilboard-nav">
   <ul>
     <li>
       {{ $next := partial "svg.html" (dict "name" "chevron-left") }}
-      {{ with .Next }}
+      {{ with $pages.Next . }}
         <a href="{{ .Permalink }}" title="Previous: {{ .Title }}">
           {{ $next }}
         </a>
@@ -48,7 +49,7 @@
     </li>
     <li>
       {{ $prev := partial "svg.html" (dict "name" "chevron-right") }}
-      {{ with .Prev }}
+      {{ with $pages.Prev . }}
         <a href="{{ .Permalink }}" title="Next: {{ .Title }}">
           {{ $prev }}
         </a>

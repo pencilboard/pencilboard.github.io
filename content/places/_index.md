@@ -1,4 +1,4 @@
 ---
 title: Places
-weight: 200
+weight: 2
 ---

@@ -1,6 +1,6 @@
 ---
 title: Bolt
-weight: 101
+weight: 1
 size: 24” x 24”
 images:
   lg: /images/bolt.jpg

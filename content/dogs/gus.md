@@ -1,6 +1,6 @@
 ---
 title: Gus
-weight: 103
+weight: 3
 size: 24” x 24”
 images:
   lg: /images/gus.jpg

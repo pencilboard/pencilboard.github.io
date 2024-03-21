@@ -1,6 +1,6 @@
 ---
 title: Pete
-weight: 104
+weight: 4
 size: 24” x 24”
 images:
   lg: /images/pete.jpg

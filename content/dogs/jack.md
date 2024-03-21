@@ -1,6 +1,6 @@
 ---
 title: Jack
-weight: 106
+weight: 6
 size: 24” x 24”
 images:
   lg: /images/jack.jpg

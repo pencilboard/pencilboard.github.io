@@ -1,6 +1,6 @@
 ---
 title: Bug
-weight: 105
+weight: 5
 size: 24” x 24”
 images:
   lg: /images/bug.jpg

@@ -1,6 +1,6 @@
 ---
 title: Bella
-weight: 102
+weight: 2
 size: 24” x 24”
 images:
   lg: /images/bella.jpg

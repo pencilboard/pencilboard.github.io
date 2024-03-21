@@ -1,7 +1,7 @@
 ---
 title: Marble
 size: 24” x 24”
-weight: 203
+weight: 3
 images:
   lg: /images/marble.jpg
   sm: /images/marble-sm.jpg

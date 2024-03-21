@@ -1,6 +1,6 @@
 ---
 title: Cooper
-weight: 107
+weight: 7
 size: 12” x 12”
 images:
   lg: /images/cooper.jpg

@@ -1,6 +1,6 @@
 ---
 title: Hercules
-weight: 108
+weight: 8
 size: 24” x 24”
 images:
   lg: /images/hercules.jpg

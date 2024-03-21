@@ -1,7 +1,7 @@
 ---
 title: Prairie Village
 size: 24” x 48”
-weight: 201
+weight: 1
 images:
   lg: /images/prairie-village.jpg
   sm: /images/prairie-village-sm.jpg

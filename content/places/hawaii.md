@@ -1,7 +1,7 @@
 ---
 title: Hawaii
 size: 24” x 24”
-weight: 204
+weight: 4
 images:
   lg: /images/hawaii.jpg
   sm: /images/hawaii-sm.jpg

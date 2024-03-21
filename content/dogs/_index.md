@@ -1,4 +1,4 @@
 ---
 title: Dogs
-weight: 100
+weight: 1
 ---
