@@ -35,9 +35,9 @@
           {{ .Params.contact.content | $.Page.RenderString (dict "display" "block") }}
           <ul class="social">
             <li>
-              <a href="{{ site.Data.social.instagram.url }}" target="_blank">
+              <a href="{{ .Params.instagram.url }}" target="_blank">
                 {{ partial "svg.html" (dict "name" "instagram") }}
-                {{ site.Data.social.instagram.label }}
+                {{ .Params.instagram.label }}
               </a>
             </li>
           </ul>

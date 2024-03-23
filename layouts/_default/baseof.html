@@ -15,16 +15,15 @@
       <div class="container-fluid">
         <div class="main-header__grid">
           <h1>
-            <a href="/">Nathan Ellis</a>
+            <a href="/">{{ site.Data.header.title }}</a>
           </h1>
           <nav>
             <ul>
-              <li>
-                <a href="/#pencilboards">Pencil Boards</a>
-              </li>
-              <li>
-                <a href="/#contact">Contact</a>
-              </li>
+              {{ range site.Data.header.nav }}
+                <li>
+                  <a href="{{ .url }}">{{ .label }}</a>
+                </li>
+              {{ end }}
             </ul>
           </nav>
         </div>
