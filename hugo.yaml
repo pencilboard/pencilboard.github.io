@@ -1,5 +1,3 @@
----
 baseURL: "https://pencilboard.art"
 title: "Pencil Boards by Nathan Ellis"
 disableKinds: ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
-...
