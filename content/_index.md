@@ -1,7 +1,7 @@
 ---
 title: Home
 params:
-  feature_image:
+  featureImage:
     src: /images/bolt-sm.jpg
     alt: Bolt
   about:
@@ -24,7 +24,8 @@ params:
       If you have any questions about my work, don’t hesitate to [email me](mailto:nathan.ellis@createwithadvocate.com).
 
       I am also open for commissions and will happily discuss your ideas with you.
-  instagram:
-    name: View more on Instagram
-    url: https://www.instagram.com/pencilboardart/
+  social:
+    - name: instagram
+      label: View more on Instagram
+      url: https://www.instagram.com/pencilboardart/
 ---

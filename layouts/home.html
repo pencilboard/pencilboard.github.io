@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="about__grid">
         <div class="about__image">
-          {{ with .Params.feature_image }}
+          {{ with .Params.featureImage }}
             <img src="{{ .src }}" alt="{{ .alt }}">
           {{ end }}
           {{ with .Params.about.image }}
@@ -43,14 +43,16 @@
             </h2>
             {{ .content | $.Page.RenderString (dict "display" "block") }}
           {{ end }}
-          {{ with .Params.instagram }}
+          {{ with .Params.social }}
             <ul class="social">
-              <li>
-                <a href="{{ .url }}" target="_blank">
-                  {{ partial "svg.html" (dict "name" "instagram") }}
-                  {{ .name }}
-                </a>
-              </li>
+              {{ range . }}
+                <li>
+                  <a href="{{ .url }}" target="_blank">
+                    {{ partial "svg.html" (dict "name" .name) }}
+                    {{ .label }}
+                  </a>
+                </li>
+              {{ end }}
             </ul>
           {{ end }}
         </div>
