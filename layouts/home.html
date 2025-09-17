@@ -3,14 +3,20 @@
     <div class="container-fluid">
       <div class="about__grid">
         <div class="about__image">
-          <img src="{{ .Params.feature_image.src }}" alt="{{ .Params.feature_image.alt }}">
-          <img src="{{ .Params.about.image.src }}" alt="{{ .Params.about.image.alt }}">
+          {{ with .Params.feature_image }}
+            <img src="{{ .src }}" alt="{{ .alt }}">
+          {{ end }}
+          {{ with .Params.about.image }}
+            <img src="{{ .src }}" alt="{{ .alt }}">
+          {{ end }}
         </div>
         <div class="about__content">
-          <h2>
-            {{ .Params.about.headline }}
-          </h2>
-          {{ .Params.about.content | $.Page.RenderString (dict "display" "block") }}
+          {{ with .Params.about }}
+            <h2>
+              {{ .headline }}
+            </h2>
+            {{ .content | $.Page.RenderString (dict "display" "block") }}
+          {{ end }}
         </div>
       </div>
     </div>
@@ -26,21 +32,27 @@
     <div class="container-fluid">
       <div class="contact__grid">
         <div class="contact__image">
-          <img src="{{ .Params.contact.image.src }}" alt="{{ .Params.contact.image.alt }}">
+          {{ with .Params.contact.image }}
+            <img src="{{ .src }}" alt="{{ .alt }}">
+          {{ end }}
         </div>
         <div class="contact__content">
-          <h2>
-            {{ .Params.contact.headline }}
-          </h2>
-          {{ .Params.contact.content | $.Page.RenderString (dict "display" "block") }}
-          <ul class="social">
-            <li>
-              <a href="{{ .Params.instagram.url }}" target="_blank">
-                {{ partial "svg.html" (dict "name" "instagram") }}
-                {{ .Params.instagram.label }}
-              </a>
-            </li>
-          </ul>
+          {{ with .Params.contact }}
+            <h2>
+              {{ .headline }}
+            </h2>
+            {{ .content | $.Page.RenderString (dict "display" "block") }}
+          {{ end }}
+          {{ with .Params.instagram }}
+            <ul class="social">
+              <li>
+                <a href="{{ .url }}" target="_blank">
+                  {{ partial "svg.html" (dict "name" "instagram") }}
+                  {{ .name }}
+                </a>
+              </li>
+            </ul>
+          {{ end }}
         </div>
       </div>
     </div>

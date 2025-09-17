@@ -1,8 +1,18 @@
-baseURL: "https://pencilboard.art"
-title: "Pencil Boards by Nathan Ellis"
-disableKinds: ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+baseURL: https://pencilboard.art
+title: Pencil Boards by Nathan Ellis
+disableKinds: [taxonomy, term, RSS, sitemap, robotsTXT]
+
 module:
   hugoVersion:
     extended: true
     max: ""
     min: "0.147.0"
+
+params:
+  header:
+    title: Nathan Ellis
+    menu:
+      - name: Pencil Boards
+        pageRef: /#pencilboards
+      - name: Contact
+        pageRef: /#contact

@@ -25,6 +25,6 @@ params:
 
       I am also open for commissions and will happily discuss your ideas with you.
   instagram:
-    label: View more on Instagram
+    name: View more on Instagram
     url: https://www.instagram.com/pencilboardart/
 ---

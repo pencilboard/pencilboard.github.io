@@ -5,9 +5,12 @@
     <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.ico">
-    {{ $cssOpts := dict "transpiler" "libsass" "targetPath" "css/main.css" }}
-    {{ with resources.Get "scss/main.scss" | toCSS $cssOpts | resources.Minify | resources.Fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ with resources.Get "scss/main.scss" }}
+      {{ $css := . | toCSS (dict "transpiler" "libsass" "targetPath" "css/main.css") }}
+      {{ if hugo.IsProduction }}
+        {{ $css = $css | minify | fingerprint }}
+      {{ end }}
+      <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     {{ end }}
   </head>
   <body>
@@ -15,13 +18,13 @@
       <div class="container-fluid">
         <div class="main-header__grid">
           <h1>
-            <a href="/">{{ site.Data.header.title }}</a>
+            <a href="/">{{ site.Params.header.title }}</a>
           </h1>
           <nav>
             <ul>
-              {{ range site.Data.header.nav }}
+              {{ range site.Params.header.menu }}
                 <li>
-                  <a href="{{ .url }}">{{ .label }}</a>
+                  <a href="{{ .pageRef }}">{{ .name }}</a>
                 </li>
               {{ end }}
             </ul>

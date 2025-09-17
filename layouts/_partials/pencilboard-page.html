@@ -20,10 +20,10 @@
         Details
       </h3>
       <div class="pencilboard-secondary-images__grid">
-        {{ $i := 0 }}
+        {{ $n := 0 }}
         {{ range . }}
-          {{ $i = add $i 1 }}
-          <img src="{{ . }}" alt="Detail {{ $i }}">
+          {{ $n = add $n 1 }}
+          <img src="{{ . }}" alt="Detail {{ $n }}">
         {{ end }}
       </div>
     </div>
